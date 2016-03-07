@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "name": "Page edit",
+    "description": "Edit the page!",
+    "version": "0.0.0.1",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "icons": {
+        "16": "logo/agario_16.png",
+        "32": "logo/agario_32.png",
+        "48": "logo/agario_48.png",
+        "64": "logo/agario_64.png",
+        "72": "logo/agario_72.png",
+        "96": "logo/agario_96.png",
+        "128": "logo/agario_128.png",
+        "144": "logo/agario_144.png",
+        "192": "logo/agario_192.png",
+        "512": "logo/agario_512.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "logo/agario_16.png",
+            "38": "logo/agario_48.png"
+        },
+        "default_title": "Edit page"
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "css": ["style.css"],
+        "js": ["script.js"]
+    }],
+    "permissions": [
+        "storage"
+    ]
+}
